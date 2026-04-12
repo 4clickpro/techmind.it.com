@@ -2,55 +2,69 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>TechMind AI Security | The Future of Intelligent Automation</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechMind AI Security | Autonomous Swarm Agency</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
-        :root { --primary: #007bff; --bg: #050505; --text: #e0e0e0; --accent: #1a1a1a; }
-        body { font-family: 'Inter', -apple-system, sans-serif; background: var(--bg); color: var(--text); margin: 0; padding: 0; }
-        header { padding: 60px 20px; background: #111; text-align: center; border-bottom: 1px solid #333; }
-        h1 { font-size: 3rem; margin-bottom: 10px; color: var(--primary); }
-        .hero-desc { font-size: 1.2rem; color: #aaa; max-width: 700px; margin: 0 auto; }
-        .container { max-width: 1100px; margin: 40px auto; display: grid; grid-template-columns: 2fr 1fr; gap: 40px; padding: 0 20px; }
-        .blog-post { background: var(--accent); padding: 30px; border-radius: 12px; margin-bottom: 25px; border: 1px solid #333; }
-        .sidebar { background: #0d0d0d; padding: 25px; border-radius: 12px; border: 1px solid #333; }
-        .agent-card { background: #222; padding: 20px; border-radius: 8px; margin-bottom: 15px; border-left: 4px solid var(--primary); }
-        button { padding: 15px 30px; font-weight: bold; background: var(--primary); color: white; border: none; border-radius: 5px; margin-top: 20px; cursor: pointer; }
-        .tech-img { width: 100%; height: 200px; background: #222; margin-bottom: 20px; border-radius: 10px; display: flex; align-items: center; justify-content: center; }
+        body { font-family: 'Inter', sans-serif; background: #050505; color: #e0e0e0; }
+        .hero-font { font-family: 'Orbitron', sans-serif; }
+        .glass { background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1); }
+        .gradient-text { background: linear-gradient(90deg, #007bff, #00d4ff); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
     </style>
 </head>
-<body>
-    <header>
-        <h1>TechMind AI Security</h1>
-        <p class="hero-desc">The Future of Intelligent & Autonomous Cybersecurity Automation</p>
-        <button onclick="window.location.href='mailto:4clickpro@gmail.com'">Hire the Swarm</button>
-    </header>
-    <div class="container">
-        <main>
-            <div class="tech-img">🤖 TechMind Neural Core Visualization</div>
-            <h2>Latest Insights</h2>
-            <div class="blog-post">
-                <h3>The AI "Torch" Protocol: Burn Threats in Real-Time</h3>
-                <p>Discover how autonomous security swarms redefine threat mitigation using neural core analysis.</p>
+<body class="overflow-x-hidden">
+    <!-- Navbar -->
+    <nav class="p-6 flex justify-between items-center glass sticky top-0 z-50">
+        <h1 class="hero-font text-2xl font-bold gradient-text">TECHMIND.IT</h1>
+        <div class="space-x-6">
+            <a href="#" class="hover:text-blue-400">Agents</a>
+            <a href="#" class="hover:text-blue-400">Security</a>
+            <button class="bg-blue-600 px-6 py-2 rounded-full hover:bg-blue-700 transition">Hire Swarm</button>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="h-screen flex flex-col items-center justify-center text-center p-6">
+        <h1 class="hero-font text-6xl md:text-8xl mb-6">Autonomous <br><span class="gradient-text">Cyber Defense</span></h1>
+        <p class="text-xl text-gray-400 max-w-2xl mb-10">Deploy a 24/7 AI-Agent Swarm. Security, Content, and Growth - fully autonomous.</p>
+        <div class="flex gap-4">
+            <button class="bg-blue-600 px-8 py-4 rounded-lg text-lg font-bold">Deploy Agency</button>
+            <button class="border border-gray-600 px-8 py-4 rounded-lg text-lg">Watch Swarm Live</button>
+        </div>
+    </section>
+
+    <!-- Swarm Agents -->
+    <section class="py-20 px-10">
+        <h2 class="hero-font text-4xl text-center mb-16">The 10-Agent Task Force</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <!-- Agent Card -->
+            <div class="glass p-6 rounded-2xl hover:border-blue-500 transition">
+                <div class="text-4xl mb-4">🦞</div>
+                <h3 class="text-xl font-bold mb-2">Manager-01</h3>
+                <p class="text-gray-400 text-sm">Autonomous CEO orchestration & strategy.</p>
             </div>
-            <div class="blog-post">
-                <h3>Autonomous Content Production: The $1M ARR Playbook</h3>
-                <p>How we replaced manual media teams with a 24/7 self-improving AI agent swarm.</p>
+            <div class="glass p-6 rounded-2xl hover:border-blue-500 transition">
+                <div class="text-4xl mb-4">🛡️</div>
+                <h3 class="text-xl font-bold mb-2">Security-05</h3>
+                <p class="text-gray-400 text-sm">Real-time threat detection & torching.</p>
             </div>
-        </main>
-        <aside class="sidebar">
-            <h3>Our Agent Force</h3>
-            <div class="agent-card">
-                <h4>Manager-01 (CEO)</h4>
-                <p>Autonomous Strategy & Logic.</p>
+            <div class="glass p-6 rounded-2xl hover:border-blue-500 transition">
+                <div class="text-4xl mb-4">🎬</div>
+                <h3 class="text-xl font-bold mb-2">Producer-03</h3>
+                <p class="text-gray-400 text-sm">High-fidelity autonomous media production.</p>
             </div>
-            <div class="agent-card">
-                <h4>Security-05 (Torch)</h4>
-                <p>Real-time Threat Response.</p>
+            <div class="glass p-6 rounded-2xl hover:border-blue-500 transition">
+                <div class="text-4xl mb-4">💰</div>
+                <h3 class="text-xl font-bold mb-2">Finance-06</h3>
+                <p class="text-gray-400 text-sm">Crypto revenue & retainer management.</p>
             </div>
-            <div class="agent-card">
-                <h4>Producer-03 (Content)</h4>
-                <p>Automated Video Production.</p>
-            </div>
-        </aside>
-    </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="p-10 border-t border-gray-800 text-center text-gray-500">
+        <p>© 2026 TechMind AI Security. Powered by OpenClaw Autonomous Swarm.</p>
+    </footer>
 </body>
 </html>
