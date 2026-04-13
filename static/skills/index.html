@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom OpenClaw Skills | Storefront</title>
+    <style>
+        :root {
+            --bg-color: #0a0a0a;
+            --panel-bg: #111111;
+            --text-main: #00ff00;
+            --text-dim: #008800;
+            --accent: #00ffff;
+            --border: #333333;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            font-family: 'Courier New', Courier, monospace;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        ::selection {
+            background: var(--text-main);
+            color: var(--bg-color);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        header {
+            border-bottom: 1px dashed var(--text-dim);
+            padding-bottom: 30px;
+            margin-bottom: 50px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin: 0 0 10px 0;
+            text-shadow: 0 0 5px var(--text-dim);
+        }
+
+        h1::before {
+            content: "root@clawhub:~# ";
+            color: var(--text-dim);
+        }
+
+        .subtitle {
+            color: var(--text-dim);
+            font-size: 1.2rem;
+            margin: 0;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 30px;
+        }
+
+        .skill-card {
+            background-color: var(--panel-bg);
+            border: 1px solid var(--border);
+            padding: 25px;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .skill-card::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: transparent;
+            transition: all 0.3s ease;
+        }
+
+        .skill-card:hover {
+            border-color: var(--text-dim);
+            box-shadow: 0 0 15px rgba(0, 255, 0, 0.1);
+            transform: translateY(-2px);
+        }
+
+        .skill-card:hover::before {
+            background-color: var(--text-main);
+        }
+
+        .skill-title {
+            color: var(--accent);
+            font-size: 1.5rem;
+            margin: 0 0 15px 0;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+        }
+
+        .skill-title::before {
+            content: "./";
+            color: var(--text-dim);
+            margin-right: 5px;
+        }
+
+        .skill-desc {
+            flex-grow: 1;
+            color: #aaaaaa;
+            font-size: 1rem;
+            margin-bottom: 25px;
+        }
+
+        .features {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 25px 0;
+        }
+
+        .features li {
+            color: #888888;
+            font-size: 0.9rem;
+            margin-bottom: 8px;
+        }
+
+        .features li::before {
+            content: ">> ";
+            color: var(--text-dim);
+        }
+
+        .buy-button {
+            background-color: transparent;
+            color: var(--text-main);
+            border: 1px solid var(--text-dim);
+            padding: 12px 20px;
+            font-family: inherit;
+            font-size: 1.1rem;
+            cursor: pointer;
+            text-align: center;
+            text-transform: uppercase;
+            font-weight: bold;
+            transition: all 0.2s;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .buy-button:hover {
+            background-color: var(--text-dim);
+            color: var(--bg-color);
+            box-shadow: 0 0 10px var(--text-dim);
+        }
+
+        .price {
+            font-weight: normal;
+        }
+
+        footer {
+            margin-top: 80px;
+            text-align: center;
+            color: var(--text-dim);
+            font-size: 0.9rem;
+            border-top: 1px dashed var(--border);
+            padding-top: 30px;
+        }
+
+        .blink {
+            animation: blinker 1s step-end infinite;
+        }
+
+        @keyframes blinker {
+            50% { opacity: 0; }
+        }
+
+        /* Scanline effect */
+        body::after {
+            content: " ";
+            display: block;
+            position: fixed;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+            z-index: 2;
+            background-size: 100% 2px, 3px 100%;
+            pointer-events: none;
+        }
+    </style>
+    <script src="https://www.paypal.com/sdk/js?client-id=BAABbe5bgI0NioYv64siihaR2sooYDW7ofpR7h1BpDKUGngNoFp6RX0KbXBZwgNV2TovnnG7dzNY1_SacI&components=hosted-buttons&enable-funding=venmo&currency=USD"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>execute_skills.sh<span class="blink">_</span></h1>
+            <p class="subtitle">Deploy custom OpenClaw capabilities directly into your workflows.</p>
+        </header>
+
+        <main class="skills-grid">
+            <!-- Skill 1 -->
+            <div class="skill-card">
+                <h2 class="skill-title">Shopify_Sync</h2>
+                <p class="skill-desc">Automate order tracking, inventory alerts, and customer support triage directly within OpenClaw.</p>
+                <ul class="features">
+                    <li>Real-time webhook listeners</li>
+                    <li>Auto-tagging for VIP customers</li>
+                    <li>Low inventory autonomous alerts</li>
+                </ul>
+                <div class="text-center font-bold text-xl mb-4" style="color: #00ff00;">$99</div>
+<div id="paypal-container-RHKYT9FKURKK2-1" style="margin-top: 1rem;"></div>
+<script>paypal.HostedButtons({hostedButtonId: "RHKYT9FKURKK2"}).render("#paypal-container-RHKYT9FKURKK2-1")</script>
+<!--
+                    <span>Execute Buy</span>
+                    <span class="price">$99</span>
+                -->
+            </div>
+
+            <!-- Skill 2 -->
+            <div class="skill-card">
+                <h2 class="skill-title">CRM_Autopilot</h2>
+                <p class="skill-desc">Auto-draft and schedule hyper-personalized follow-up emails via Salesforce or HubSpot API.</p>
+                <ul class="features">
+                    <li>Meeting notes extraction</li>
+                    <li>Sentiment analysis on replies</li>
+                    <li>Automated calendar booking links</li>
+                </ul>
+                <div class="text-center font-bold text-xl mb-4" style="color: #00ff00;">$99</div>
+<div id="paypal-container-RHKYT9FKURKK2-2" style="margin-top: 1rem;"></div>
+<script>paypal.HostedButtons({hostedButtonId: "RHKYT9FKURKK2"}).render("#paypal-container-RHKYT9FKURKK2-2")</script>
+<!--
+                    <span>Execute Buy</span>
+                    <span class="price">$99</span>
+                -->
+            </div>
+
+            <!-- Skill 3 -->
+            <div class="skill-card">
+                <h2 class="skill-title">Competitor_Intel</h2>
+                <p class="skill-desc">Scrape, analyze, and summarize competitor pricing pages and feature releases weekly.</p>
+                <ul class="features">
+                    <li>Headless browser automation</li>
+                    <li>Diff tracking over time</li>
+                    <li>Slack/Discord alert integration</li>
+                </ul>
+                <div class="text-center font-bold text-xl mb-4" style="color: #00ff00;">$149</div>
+<div id="paypal-container-P3H8PN73PEH92-3" style="margin-top: 1rem;"></div>
+<script>paypal.HostedButtons({hostedButtonId: "P3H8PN73PEH92"}).render("#paypal-container-P3H8PN73PEH92-3")</script>
+<!--
+                    <span>Execute Buy</span>
+                    <span class="price">$149</span>
+                -->
+            </div>
+
+            <!-- Skill 4 -->
+            <div class="skill-card">
+                <h2 class="skill-title">Fin_Reporter</h2>
+                <p class="skill-desc">Generate weekly P&L summaries and cash flow analysis from Stripe and Quickbooks integrations.</p>
+                <ul class="features">
+                    <li>Multi-currency normalization</li>
+                    <li>Churn rate prediction models</li>
+                    <li>Automated PDF generation</li>
+                </ul>
+                <div class="text-center font-bold text-xl mb-4" style="color: #00ff00;">$199</div>
+<div id="paypal-container-HKPFDGH72K3C4-4" style="margin-top: 1rem;"></div>
+<script>paypal.HostedButtons({hostedButtonId: "HKPFDGH72K3C4"}).render("#paypal-container-HKPFDGH72K3C4-4")</script>
+<!--
+                    <span>Execute Buy</span>
+                    <span class="price">$199</span>
+                -->
+            </div>
+
+            <!-- Skill 5 -->
+            <div class="skill-card">
+                <h2 class="skill-title">Social_Sentiment</h2>
+                <p class="skill-desc">Monitor Twitter, Reddit, and HackerNews for brand mentions and automatically draft responses.</p>
+                <ul class="features">
+                    <li>Keyword & brand tracking</li>
+                    <li>Triage by urgency/sentiment</li>
+                    <li>Auto-draft apology/thank you notes</li>
+                </ul>
+                <div class="text-center font-bold text-xl mb-4" style="color: #00ff00;">$99</div>
+<div id="paypal-container-RHKYT9FKURKK2-5" style="margin-top: 1rem;"></div>
+<script>paypal.HostedButtons({hostedButtonId: "RHKYT9FKURKK2"}).render("#paypal-container-RHKYT9FKURKK2-5")</script>
+<!--
+                    <span>Execute Buy</span>
+                    <span class="price">$99</span>
+                -->
+            </div>
+
+            <!-- Skill 6 -->
+            <div class="skill-card">
+                <h2 class="skill-title">Code_Reviewer</h2>
+                <p class="skill-desc">Autonomous GitHub/GitLab PR reviews focusing on security, performance, and style guidelines.</p>
+                <ul class="features">
+                    <li>OWASP vulnerability checks</li>
+                    <li>Complexity & linting feedback</li>
+                    <li>Inline PR comments</li>
+                </ul>
+                <div class="text-center font-bold text-xl mb-4" style="color: #00ff00;">$149</div>
+<div id="paypal-container-P3H8PN73PEH92-6" style="margin-top: 1rem;"></div>
+<script>paypal.HostedButtons({hostedButtonId: "P3H8PN73PEH92"}).render("#paypal-container-P3H8PN73PEH92-6")</script>
+<!--
+                    <span>Execute Buy</span>
+                    <span class="price">$149</span>
+                -->
+            </div>
+        </main>
+
+        <footer>
+            <p>SYSTEM.STATUS: ONLINE | TERMINAL SESSION ESTABLISHED</p>
+            <p>Powered by ClawdHub // Run `contact --agency` for custom solutions</p>
+        </footer>
+    </div>
+</body>
+</html>

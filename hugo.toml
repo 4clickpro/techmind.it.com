@@ -1,0 +1,4 @@
+baseURL = "https://www.realtld.com/"
+languageCode = "en-us"
+title = "RealTLD"
+theme = "ananke"

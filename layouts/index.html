@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RealTLD - Autonomous AI Operations for High-Ticket Services</title>
+    <meta name="description" content="Deploying elite AI agents for setup, content generation, and enterprise operations.">
+    <style>
+        :root {
+            --primary: #050508;
+            --accent: #f5c842;
+            --accent-hover: #ffffff;
+            --bg: #010203;
+            --card-bg: rgba(15, 20, 30, 0.8);
+            --border: rgba(200, 220, 255, 0.1);
+            --text: #e2e8f0;
+            --text-light: #94a3b8;
+            --highlight: #00e5b0;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', -apple-system, sans-serif; background-color: var(--bg); color: var(--text); line-height: 1.6; }
+        
+        /* Header */
+        header { background-color: rgba(5, 5, 8, 0.9); backdrop-filter: blur(10px); position: sticky; top: 0; z-index: 100; border-bottom: 1px solid var(--border); padding: 1.5rem 0; }
+        .header-content { max-width: 1200px; margin: 0 auto; padding: 0 2rem; display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 1.8rem; font-weight: 800; text-decoration: none; color: white; letter-spacing: 1px; text-transform: uppercase; }
+        .logo span { color: var(--accent); }
+        .contact-btn { background: transparent; border: 1px solid var(--accent); color: var(--accent); padding: 8px 16px; border-radius: 4px; text-decoration: none; font-size: 0.9rem; font-weight: 600; text-transform: uppercase; transition: all 0.2s; }
+        .contact-btn:hover { background: var(--accent); color: var(--primary); }
+        
+        /* Hero Section */
+        .hero { background: radial-gradient(circle at center, #111a2a 0%, #050508 100%); padding: 6rem 2rem; text-align: center; border-bottom: 1px solid var(--border); }
+        .hero h1 { font-size: 3.5rem; max-width: 800px; margin: 0 auto 1.5rem auto; line-height: 1.2; font-weight: 800; color: #ffffff; }
+        .hero p { font-size: 1.25rem; color: var(--text-light); max-width: 600px; margin: 0 auto 2.5rem auto; }
+        
+        /* Grid Layout */
+        .container { max-width: 1200px; margin: 0 auto; padding: 4rem 2rem; }
+        .section-title { font-size: 1.5rem; text-transform: uppercase; letter-spacing: 3px; color: var(--text-light); margin-bottom: 2rem; text-align: center; border-bottom: 1px solid var(--border); padding-bottom: 10px; }
+        
+        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 2rem; }
+        
+        /* Cards */
+        .card { background-color: var(--card-bg); border: 1px solid var(--border); border-radius: 12px; padding: 2.5rem; transition: transform 0.3s ease, border-color 0.3s ease; display: flex; flex-direction: column; }
+        .card:hover { transform: translateY(-5px); border-color: var(--accent); box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); }
+        
+        .card-price { font-family: monospace; color: var(--highlight); font-size: 1.1rem; font-weight: 700; margin-bottom: 1rem; }
+        .card-title { font-size: 1.5rem; font-weight: 700; color: white; margin-bottom: 1rem; }
+        .card-desc { color: var(--text-light); font-size: 1rem; margin-bottom: 2rem; flex-grow: 1; }
+        
+        .btn { display: inline-block; background-color: var(--accent); color: var(--primary); text-decoration: none; padding: 12px 24px; border-radius: 6px; font-weight: 700; text-align: center; text-transform: uppercase; letter-spacing: 1px; transition: background-color 0.2s ease; }
+        .btn:hover { background-color: var(--accent-hover); }
+
+        /* Footer */
+        footer { background-color: var(--primary); color: var(--text-light); text-align: center; padding: 3rem 2rem; border-top: 1px solid var(--border); margin-top: 4rem; }
+        
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.5rem; }
+            .services-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+    <script src="https://www.paypal.com/sdk/js?client-id=BAABbe5bgI0NioYv64siihaR2sooYDW7ofpR7h1BpDKUGngNoFp6RX0KbXBZwgNV2TovnnG7dzNY1_SacI&components=hosted-buttons&enable-funding=venmo&currency=USD"></script>
+</head>
+<body>
+
+    <header>
+        <div class="header-content">
+            <a href="#" class="logo">Real<span>TLD</span></a>
+            <a href="mailto:sales@realtld.com" class="contact-btn">Contact</a>
+        </div>
+    </header>
+
+    <section class="hero">
+        <h1>Autonomous Operations & AI Infrastructure</h1>
+        <p>We build, deploy, and consult on elite AI agents that replace traditional agencies, cut devops overhead, and scale operations infinitely.</p>
+    </section>
+
+    <div class="container">
+        <h2 class="section-title">Core Offerings</h2>
+        
+        <div class="services-grid">
+            
+            <!-- Service 1 -->
+            <div class="card">
+                <div class="card-price">$3,000 / $5,000</div>
+                <h2 class="card-title">OpenClaw Setup Service</h2>
+                <p class="card-desc">Turnkey autonomous AI infrastructure for busy founders. Stop wasting time trying to build agents yourself. We deploy a fully secure, 24/7 digital employee directly to a Cloud VPS or your local Mac Mini. Zero devops headaches.</p>
+                <!-- REPLACE # WITH PAYPAL LINK WHEN READY -->
+                <a href="/setup" class="btn">Deploy Agent</a>
+            </div>
+
+            <!-- Service 2 -->
+            <div class="card">
+                <div class="card-price">$2,000 / month</div>
+                <h2 class="card-title">AI Content Studio</h2>
+                <p class="card-desc">An autonomous 24/7 content pipeline for your personal brand. Traditional marketing agencies are bloated, slow, and expensive. Our AI studio drafts, posts, and schedules viral content in your exact brand voice, instantly.</p>
+                <a href="/content-studio" class="btn">Start Pipeline</a>
+            </div>
+
+            <!-- Service 3 -->
+            <div class="card">
+                <div class="card-price">$99 - $199</div>
+                <h2 class="card-title">Custom ClawdHub Skills</h2>
+                <p class="card-desc">Premium vertical skills for your OpenClaw agent. Instantly upgrade your AI's capabilities with plug-and-play integrations for Shopify syncing, CRM Autopilot, Competitor Intelligence, and Financial Reporting.</p>
+                <a href="/skills" class="btn">Browse Skills</a>
+            </div>
+
+            <!-- Service 4 -->
+            <div class="card">
+                <div class="card-price">$100,000 / Quarter</div>
+                <h2 class="card-title">Corporate Paperclip Infrastructure</h2>
+                <p class="card-desc">Deploy a private, embedded Paperclip instance strictly for your corporate enterprise. We architect and build up to 10 highly-specialized AI agents operating across your company with zero-trust security and embedded Postgres data storage.</p>
+                <a href="/consultant" class="btn">Engage Retainer</a>
+            </div>
+
+            <!-- Service 5 -->
+            <div class="card">
+                <div class="card-price">$299 / month</div>
+                <h2 class="card-title">Legal AI SaaS Wrapper</h2>
+                <p class="card-desc">A 24/7 AI Paralegal explicitly designed for mid-sized law firms. Automate legal research, document summarization, and admin work with absolute data privacy and one-click cloud deployment. Save hundreds of billable hours.</p>
+                <a href="/saas" class="btn">Subscribe Pro</a>
+            </div>
+
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 RealTLD. All Rights Reserved. | Autonomous Infrastructure</p>
+    </footer>
+
+</body>
+</html>

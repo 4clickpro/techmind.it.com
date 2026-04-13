@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ .Title }} | RealTLD</title>
+    <meta name="description" content="{{ .Params.meta_description }}">
+    <style>
+        :root {
+            --primary: #0f172a;
+            --accent: #2563eb;
+            --accent-hover: #1d4ed8;
+            --bg: #f8fafc;
+            --card-bg: #ffffff;
+            --text: #334155;
+            --text-light: #64748b;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', -apple-system, sans-serif; background-color: var(--bg); color: var(--text); line-height: 1.8; }
+        
+        header { background-color: var(--primary); color: white; padding: 1.5rem 0; border-bottom: 4px solid var(--accent); }
+        .header-content { max-width: 1200px; margin: 0 auto; padding: 0 2rem; display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 1.8rem; font-weight: 800; text-decoration: none; color: white; letter-spacing: -0.5px; }
+        .logo span { color: var(--accent); }
+        
+        .container { max-width: 1200px; margin: 0 auto; padding: 2rem; display: grid; grid-template-columns: 2.5fr 1fr; gap: 4rem; }
+        @media (max-width: 900px) { .container { grid-template-columns: 1fr; } }
+        
+        .article-header { margin-bottom: 3rem; padding-bottom: 2rem; border-bottom: 1px solid #e2e8f0; }
+        h1 { font-size: 2.5rem; color: var(--primary); line-height: 1.2; margin-bottom: 1rem; }
+        .meta { color: var(--text-light); font-size: 0.95rem; }
+        
+        .content h2 { font-size: 1.8rem; color: var(--primary); margin: 3rem 0 1rem 0; }
+        .content h3 { font-size: 1.4rem; color: var(--primary); margin: 2rem 0 1rem 0; }
+        .content p { margin-bottom: 1.5rem; font-size: 1.1rem; }
+        .content ul, .content ol { margin-bottom: 1.5rem; padding-left: 2rem; font-size: 1.1rem; }
+        .content li { margin-bottom: 0.5rem; }
+        .content a { color: var(--accent); text-decoration: none; font-weight: 600; border-bottom: 2px solid transparent; transition: border-color 0.2s; }
+        .content a:hover { border-bottom-color: var(--accent); }
+        
+        .content strong { color: var(--primary); font-weight: 700; }
+        .content hr { border: 0; height: 1px; background: #e2e8f0; margin: 3rem 0; }
+        
+        .sidebar { display: flex; flex-direction: column; gap: 2rem; }
+        
+        /* Tiered Sidebar Banners */
+        .premium-banner-sidebar { background: #0f172a; border-radius: 12px; padding: 2rem; text-align: center; color: white; box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3); border: 1px solid #334155; display: flex; flex-direction: column; justify-content: center; align-items: center; background-image: radial-gradient(circle at top right, #1e293b, transparent); margin-bottom: 2rem; }
+        .premium-banner-sidebar.sticky { position: sticky; top: 2rem; }
+        .premium-banner-sidebar .badge { background-color: #ef4444; color: white; padding: 0.25rem 0.75rem; border-radius: 20px; font-size: 0.8rem; font-weight: bold; text-transform: uppercase; margin-bottom: 1rem; }
+        .premium-banner-sidebar h3 { font-size: 2rem; font-weight: 900; margin-bottom: 1rem; line-height: 1.1; color: white; }
+        .premium-banner-sidebar p { color: #94a3b8; font-size: 0.95rem; margin-bottom: 1.5rem; }
+        .premium-banner-sidebar .price { font-size: 2.2rem; font-weight: 900; color: #10b981; margin-bottom: 1.5rem; }
+        .premium-banner-sidebar .banner-btn { background-color: #10b981; color: white; padding: 1rem 1.5rem; border-radius: 50px; font-weight: bold; font-size: 1rem; text-decoration: none; text-transform: uppercase; letter-spacing: 1px; transition: transform 0.2s; width: 100%; }
+        .premium-banner-sidebar .banner-btn:hover { background-color: #059669; transform: scale(1.05); }
+        .premium-banner-sidebar .secondary-btn { background-color: transparent; border: 2px solid #3b82f6; margin-top: 1rem; }
+        .premium-banner-sidebar .secondary-btn:hover { background-color: rgba(59, 130, 246, 0.1); }
+        
+        footer { background-color: var(--primary); color: white; text-align: center; padding: 3rem 2rem; margin-top: 4rem; }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <a href="/" class="logo">Real<span>TLD</span></a>
+        </div>
+    </header>
+
+    <div class="container">
+        <main>
+            <article>
+                <div class="article-header">
+                    <h1>{{ .Title }}</h1>
+                    <div class="meta">By {{ .Params.author }} | Published on {{ .Date.Format "January 2, 2006" }}</div>
+                </div>
+                
+                <div class="content">
+                    {{ .Content | safeHTML }}
+                </div>
+            </article>
+        </main>
+
+        <aside class="sidebar">
+            <div class="premium-banner-sidebar" style="position: relative; overflow: hidden;">
+                <img src="/images/openclaw-banner.png" alt="OpenClaw Build Team" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.15; z-index: 0;">
+                <div style="position: relative; z-index: 1; display: flex; flex-direction: column; align-items: center; width: 100%;">
+                <div class="badge">Most Popular</div>
+                <h3>The Solo AI Agent</h3>
+                <p>Hire a custom-built, fully autonomous OpenClaw AI worker to run your real estate workflow 24/7.</p>
+                <div class="price">00</div>
+                <a href="https://whop.com/realtld/openclaw-solo-agent-500" class="banner-btn" target="_blank" rel="noopener noreferrer">Deploy Your Agent</a>
+                <p style="font-size: 0.8rem; margin-top: 1rem; color: #475569;">Includes 1hr integration consulting.</p>
+                </div>
+            </div>
+
+            <div class="premium-banner-sidebar sticky" style="position: relative; overflow: hidden;">
+                <img src="/images/openclaw-banner.png" alt="OpenClaw Build Team" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.15; z-index: 0;">
+                <div style="position: relative; z-index: 1; display: flex; flex-direction: column; align-items: center; width: 100%;">
+                <div class="badge" style="background-color: #3b82f6;">Enterprise</div>
+                <h3>The AI Strike Team</h3>
+                <p>A custom-built, 5-agent or 10-agent OpenClaw Swarm designed for massive scale.</p>
+                <div class="price">,500+</div>
+                <a href="mailto:4clickpro@gmail.com?subject=Inquiry: OpenClaw Enterprise Swarm" class="banner-btn secondary-btn">Contact Sales</a>
+                <p style="font-size: 0.8rem; margin-top: 1rem; color: #475569;">For brokerages and high-volume teams.</p>
+                </div>
+            </div>
+        </aside>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 RealTLD. All rights reserved.</p>
+    </footer>
+</body>
+</html>
