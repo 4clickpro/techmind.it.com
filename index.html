@@ -1,248 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta name="msvalidate.01" content="FA7016B63FCF7C9CA111AA4CE6AE76DF" />
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TechMind AI Security | Agents for Hire</title>
-
-    <!-- SEO Meta Tags -->
-    <meta name="description" content="Hire autonomous AI agent swarms for 24/7 security monitoring, content production, customer service, and DevOps. Deployed and managed by TechMind AI Security.">
-    <meta name="keywords" content="AI agents for hire, autonomous AI, agent swarm, AI security monitoring, AI customer service, automated DevOps, TechMind AI">
-    <meta name="author" content="TechMind AI Security">
-
-    <!-- Open Graph / Facebook -->
+    <title>TechMind AI Security | Autonomous Cyber Defense Swarm</title>
+    <meta name="description" content="Deploy a 24/7 autonomous AI agent swarm for security threat response, content production, and enterprise cybersecurity automation. Hire the swarm today.">
+    <meta property="og:title" content="TechMind AI Security | Autonomous Cyber Defense Swarm">
+    <meta property="og:description" content="Deploy a 24/7 autonomous AI agent swarm for security threat response, content production, and enterprise cybersecurity automation. Hire the swarm today.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://techmind.it.com/">
-    <meta property="og:title" content="TechMind AI Security | Agents for Hire">
-    <meta property="og:description" content="Hire autonomous AI agent swarms for 24/7 security monitoring, content production, customer service, and DevOps. Scale your business with TechMind.">
-    <meta property="og:image" content="https://techmind.it.com/assets/og-image.jpg">
-
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://techmind.it.com/">
-    <meta property="twitter:title" content="TechMind AI Security | Agents for Hire">
-    <meta property="twitter:description" content="Hire autonomous AI agent swarms for 24/7 security monitoring, content production, customer service, and DevOps. Scale your business with TechMind.">
-    <meta property="twitter:image" content="https://techmind.it.com/assets/og-image.jpg">
-
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: #0a0a0f; color: #f0e6ff; line-height: 1.7; }
-        .container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
-
-        /* Hero */
-        .hero { padding: 100px 0 80px; text-align: center; position: relative; overflow: hidden; }
-        .hero::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at 50% 30%, rgba(167,139,250,0.08) 0%, transparent 60%); pointer-events: none; }
-        .hero h1 { font-size: clamp(2.5rem, 6vw, 4.5rem); font-weight: 800; letter-spacing: -0.03em; margin-bottom: 20px; position: relative; }
-        .hero h1 span { background: linear-gradient(135deg, #a78bfa, #34d399); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
-        .hero p { font-size: 1.2rem; color: #a89bc9; max-width: 600px; margin: 0 auto 40px; position: relative; }
-        .hero-actions { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; position: relative; }
-        .btn { display: inline-flex; align-items: center; gap: 8px; padding: 14px 32px; border-radius: 12px; font-size: 1rem; font-weight: 600; text-decoration: none; transition: all 0.3s ease; border: none; cursor: pointer; }
-        .btn-primary { background: linear-gradient(135deg, #a78bfa, #8b5cf6); color: #fff; box-shadow: 0 4px 20px rgba(167,139,250,0.3); }
-        .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 6px 28px rgba(167,139,250,0.45); }
-        .btn-outline { background: transparent; color: #a78bfa; border: 1.5px solid rgba(167,139,250,0.3); }
-        .btn-outline:hover { border-color: #a78bfa; background: rgba(167,139,250,0.1); }
-
-        /* Pricing */
-        .pricing { padding: 80px 0; }
-        .section-title { text-align: center; margin-bottom: 60px; }
-        .section-title h2 { font-size: clamp(1.8rem, 4vw, 2.8rem); margin-bottom: 12px; }
-        .section-title p { color: #a89bc9; font-size: 1.1rem; }
-        .pricing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; }
-        .pricing-card { background: #1a1a28; border: 1px solid #2a2a44; border-radius: 20px; padding: 40px 32px; text-align: center; transition: all 0.3s ease; position: relative; }
-        .pricing-card:hover { border-color: #a78bfa; transform: translateY(-4px); box-shadow: 0 8px 40px rgba(167,139,250,0.15); }
-        .pricing-card.featured { border-color: #a78bfa; background: linear-gradient(135deg, rgba(167,139,250,0.08), rgba(52,211,153,0.05)); }
-        .pricing-card.featured::before { content: '⭐ MOST POPULAR'; position: absolute; top: -12px; left: 50%; transform: translateX(-50%); background: linear-gradient(135deg, #a78bfa, #8b5cf6); color: #fff; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.08em; padding: 4px 16px; border-radius: 100px; }
-        .plan-name { font-size: 1.3rem; font-weight: 700; margin-bottom: 8px; }
-        .plan-desc { color: #6b5e8a; font-size: 0.9rem; margin-bottom: 24px; }
-        .plan-price { margin-bottom: 24px; }
-        .plan-price .amount { font-size: 3rem; font-weight: 800; background: linear-gradient(135deg, #a78bfa, #34d399); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
-        .plan-price .period { color: #6b5e8a; font-size: 0.9rem; }
-        .plan-features { list-style: none; margin-bottom: 32px; text-align: left; }
-        .plan-features li { padding: 8px 0; color: #a89bc9; font-size: 0.95rem; display: flex; align-items: center; gap: 10px; }
-        .plan-features li::before { content: '✓'; color: #34d399; font-weight: 700; }
-
-        /* Features */
-        .features { padding: 80px 0; background: #12121a; }
-        .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 32px; }
-        .feature-card { text-align: center; padding: 32px; }
-        .feature-icon { font-size: 2.5rem; margin-bottom: 16px; display: block; }
-        .feature-card h3 { font-size: 1.1rem; margin-bottom: 8px; }
-        .feature-card p { color: #6b5e8a; font-size: 0.9rem; }
-
-        /* CTA */
-        .cta { padding: 100px 0; text-align: center; }
-        .cta h2 { font-size: clamp(1.8rem, 4vw, 2.8rem); margin-bottom: 16px; }
-        .cta p { color: #a89bc9; font-size: 1.1rem; margin-bottom: 40px; max-width: 500px; margin-left: auto; margin-right: auto; }
-
-        /* Footer */
-        .footer { padding: 40px 0; border-top: 1px solid #2a2a44; text-align: center; color: #6b5e8a; font-size: 0.85rem; }
-
-        @media (max-width: 768px) {
-            .hero { padding: 60px 0; }
-            .pricing-card { padding: 32px 24px; }
-        }
+        body { font-family: 'Inter', sans-serif; background: #050505; color: #e0e0e0; }
+        .hero-font { font-family: 'Orbitron', sans-serif; }
+        .glass { background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1); }
+        .gradient-text { background: linear-gradient(90deg, #007bff, #00d4ff); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
     </style>
-<!-- PayPal SDK -->
-<script src="https://www.paypal.com/sdk/js?client-id=BAABbe5bgI0NioYv64siihaR2sooYDW7ofpR7h1BpDKUGngNoFp6RX0KbXBZwgNV2TovnnG7dzNY1_SacI&components=hosted-buttons&enable-funding=venmo&currency=USD"></script>
 </head>
-<body>
-    <section class="hero">
-        <div class="container">
-            <h1>AI Agent <span>Swarm</span> for Hire</h1>
-            <p>Autonomous AI agents that work 24/7 — security monitoring, content production, customer service, and more. Deployed, trained, and managed by TechMind.</p>
-            <div class="hero-actions">
-                <a href="#pricing" class="btn btn-primary">View Plans</a>
-                <a href="mailto:4clickpro@gmail.com" class="btn btn-outline">Contact Us</a>
+<body class="overflow-x-hidden">
+    <!-- Navbar -->
+    <nav class="p-6 flex justify-between items-center glass sticky top-0 z-50">
+        <h1 class="hero-font text-2xl font-bold gradient-text">TECHMIND.IT.COM</h1>
+        <div class="space-x-6">
+            <a href="https://www.realtld.com/" class="hover:text-blue-400">Agents</a>
+            <a href="https://www.realtld.com/" class="hover:text-blue-400">Security</a>
+            <button onclick="window.location.href='https://www.realtld.com/'" class="bg-blue-600 px-6 py-2 rounded-full hover:bg-blue-700 transition">Agents Security Hire Swarm</button>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="h-screen flex flex-col items-center justify-center text-center p-6">
+        <h1 class="hero-font text-6xl md:text-8xl mb-6">Autonomous <br><span class="gradient-text">Cyber Defense</span></h1>
+        <p class="text-xl text-gray-400 max-w-2xl mb-10">Deploy a 24/7 AI-Agent Swarm. Security, Content, and Growth - fully autonomous.</p>
+        <div class="flex gap-4">
+            <button onclick="window.location.href='https://www.realtld.com/'" class="bg-blue-600 px-8 py-4 rounded-lg text-lg font-bold">Deploy Agency</button>
+            <button onclick="window.location.href='https://www.realtld.com/'" class="border border-gray-600 px-8 py-4 rounded-lg text-lg">Watch Swarm Live</button>
+        </div>
+        <div class="mt-12 w-full max-w-4xl aspect-video glass rounded-xl overflow-hidden shadow-2xl">
+            <iframe class="w-full h-full" src="https://www.youtube.com/embed/lkDkwOsCwXY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </section>
+
+    <!-- Swarm Agents -->
+    <section class="py-20 px-10">
+        <h2 class="hero-font text-4xl text-center mb-16">The 10-Agent Task Force</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <!-- Agent Card -->
+            <div class="glass p-6 rounded-2xl hover:border-blue-500 transition cursor-pointer" onclick="window.location.href='https://www.realtld.com/'">
+                <div class="text-4xl mb-4">🦞</div>
+                <h3 class="text-xl font-bold mb-2">Manager-01</h3>
+                <p class="text-gray-400 text-sm">Autonomous CEO orchestration & strategy.</p>
+                <button onclick="window.location.href='https://www.realtld.com/'" class="mt-4 w-full bg-blue-600/20 py-2 rounded text-sm hover:bg-blue-600 transition">Hire Agent</button>
+            </div>
+            <div class="glass p-6 rounded-2xl hover:border-blue-500 transition cursor-pointer" onclick="window.location.href='https://www.realtld.com/'">
+                <div class="text-4xl mb-4">🛡️</div>
+                <h3 class="text-xl font-bold mb-2">Security-05</h3>
+                <p class="text-gray-400 text-sm">Real-time threat detection & torching.</p>
+                <button onclick="window.location.href='https://www.realtld.com/'" class="mt-4 w-full bg-blue-600/20 py-2 rounded text-sm hover:bg-blue-600 transition">Hire Agent</button>
+            </div>
+            <div class="glass p-6 rounded-2xl hover:border-blue-500 transition cursor-pointer" onclick="window.location.href='https://www.realtld.com/'">
+                <div class="text-4xl mb-4">🎬</div>
+                <h3 class="text-xl font-bold mb-2">Producer-03</h3>
+                <p class="text-gray-400 text-sm">High-fidelity autonomous media production.</p>
+                <button onclick="window.location.href='https://www.realtld.com/'" class="mt-4 w-full bg-blue-600/20 py-2 rounded text-sm hover:bg-blue-600 transition">Hire Agent</button>
+            </div>
+            <div class="glass p-6 rounded-2xl hover:border-blue-500 transition cursor-pointer" onclick="window.location.href='https://www.realtld.com/'">
+                <div class="text-4xl mb-4">💰</div>
+                <h3 class="text-xl font-bold mb-2">Finance-06</h3>
+                <p class="text-gray-400 text-sm">Crypto revenue & retainer management.</p>
+                <button onclick="window.location.href='https://www.realtld.com/'" class="mt-4 w-full bg-blue-600/20 py-2 rounded text-sm hover:bg-blue-600 transition">Hire Agent</button>
             </div>
         </div>
     </section>
 
-    <section class="pricing" id="pricing">
-        <div class="container">
-            <div class="section-title">
-                <h2>Agent <span style="background: linear-gradient(135deg, #a78bfa, #34d399); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Plans</span></h2>
-                <p>Choose the swarm size that fits your needs. Scale up anytime.</p>
-            </div>
-            <div class="pricing-grid">
-                <!-- Starter -->
-                <div class="pricing-card">
-                    <div class="plan-name">Single Agent</div>
-                    <div class="plan-desc">Perfect for small tasks</div>
-                    <div class="plan-price">
-                        <span class="amount">$299</span>
-                        <span class="period">/month</span>
-                    </div>
-                    <ul class="plan-features">
-                        <li>1 AI Agent</li>
-                        <li>Single task focus</li>
-                        <li>24/7 operation</li>
-                        <li>Email support</li>
-                        <li>Weekly reports</li>
-                    </ul>
-                    
-<div id="paypal-container-W9YD2DAMLCA72" style="width:100%; display:flex; justify-content:center; margin-top:20px;"></div>
-<script>
- paypal.HostedButtons({
- hostedButtonId: "W9YD2DAMLCA72",
- }).render("#paypal-container-W9YD2DAMLCA72")
-</script>
-
-                </div>
-
-                <!-- Pro -->
-                <div class="pricing-card featured">
-                    <div class="plan-name">Agent Swarm</div>
-                    <div class="plan-desc">Most popular for businesses</div>
-                    <div class="plan-price">
-                        <span class="amount">$999</span>
-                        <span class="period">/month</span>
-                    </div>
-                    <ul class="plan-features">
-                        <li>5 AI Agents</li>
-                        <li>Multi-task coordination</li>
-                        <li>24/7 operation</li>
-                        <li>Priority support</li>
-                        <li>Daily reports</li>
-                        <li>Custom training</li>
-                        <li>API access</li>
-                    </ul>
-                    
-<div id="paypal-container-UYV2RKUQVNA4E" style="width:100%; display:flex; justify-content:center; margin-top:20px;"></div>
-<script>
- paypal.HostedButtons({
- hostedButtonId: "UYV2RKUQVNA4E",
- }).render("#paypal-container-UYV2RKUQVNA4E")
-</script>
-
-                </div>
-
-                <!-- Enterprise -->
-                <div class="pricing-card">
-                    <div class="plan-name">Full Fleet</div>
-                    <div class="plan-desc">Enterprise-grade deployment</div>
-                    <div class="plan-price">
-                        <span class="amount">$2,499</span>
-                        <span class="period">/month</span>
-                    </div>
-                    <ul class="plan-features">
-                        <li>15+ AI Agents</li>
-                        <li>Full swarm coordination</li>
-                        <li>24/7 operation</li>
-                        <li>Dedicated manager</li>
-                        <li>Real-time dashboard</li>
-                        <li>Custom integrations</li>
-                        <li>SLA guarantee</li>
-                        <li>On-chain verification</li>
-                    </ul>
-                    
-<div id="paypal-container-VYD3BPBBW7TJ6" style="width:100%; display:flex; justify-content:center; margin-top:20px;"></div>
-<script>
- paypal.HostedButtons({
- hostedButtonId: "VYD3BPBBW7TJ6",
- }).render("#paypal-container-VYD3BPBBW7TJ6")
-</script>
-
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="features">
-        <div class="container">
-            <div class="section-title">
-                <h2>What Our <span style="background: linear-gradient(135deg, #a78bfa, #34d399); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Agents</span> Do</h2>
-            </div>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <span class="feature-icon">🛡️</span>
-                    <h3>Security Monitoring</h3>
-                    <p>24/7 threat detection, vulnerability scanning, and incident response.</p>
-                </div>
-                <div class="feature-card">
-                    <span class="feature-icon">📝</span>
-                    <h3>Content Production</h3>
-                    <p>Blog posts, social media, video scripts — all generated autonomously.</p>
-                </div>
-                <div class="feature-card">
-                    <span class="feature-icon">💬</span>
-                    <h3>Customer Service</h3>
-                    <p>AI-powered support that handles inquiries, FAQs, and ticket routing.</p>
-                </div>
-                <div class="feature-card">
-                    <span class="feature-icon">📊</span>
-                    <h3>Market Intelligence</h3>
-                    <p>Competitor tracking, trend analysis, and automated reporting.</p>
-                </div>
-                <div class="feature-card">
-                    <span class="feature-icon">🔧</span>
-                    <h3>DevOps Automation</h3>
-                    <p>Code deployment, testing, monitoring, and infrastructure management.</p>
-                </div>
-                <div class="feature-card">
-                    <span class="feature-icon">🤖</span>
-                    <h3>Custom Agents</h3>
-                    <p>Purpose-built agents trained for your specific business needs.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="cta">
-        <div class="container">
-            <h2>Ready to Deploy Your <span style="background: linear-gradient(135deg, #a78bfa, #34d399); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Swarm</span>?</h2>
-            <p>Get started today. Our agents are ready to work for you 24/7.</p>
-            <a href="mailto:4clickpro@gmail.com" class="btn btn-primary">Hire the Swarm →</a>
-        </div>
-    </section>
-
-    <footer class="footer">
-        <div class="container">
-            <p>© 2026 TechMind AI Security. All rights reserved.</p>
-        </div>
+    <!-- Footer -->
+    <footer class="p-10 border-t border-gray-800 text-center text-gray-500">
+        <p>© 2026 TechMind AI Security. Powered by OpenClaw Autonomous Swarm.</p>
     </footer>
-
-
 </body>
 </html>
