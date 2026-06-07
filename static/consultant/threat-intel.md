@@ -11,4 +11,4 @@ The Apex Defense Force has deployed its proprietary Nvidia-powered monitoring gr
 ### Your Security, Our Mission
 If your enterprise is under attack, or if you suspect you are being targeted by cybercriminals, do not stay silent. Join the Apex Defense Force and take the fight to them.
 
-[Request an Immediate Threat Intel Audit](https://www.realtld.com/static/consultant/index.html)
+[Request an Immediate Threat Intel Audit](https://www.gohighlevel.com/ai/june?fp_ref=pkp8t5static/consultant/index.html)

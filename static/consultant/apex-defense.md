@@ -15,4 +15,4 @@ We don't just defend; we hunt. Powered by Nvidia Secure AI Agents, NemoClaw netw
 
 We are on a mission to secure the future of the web. We aren't just building; we're cleansing.
 
-[Engage Apex Defense & Deploy Secure Infrastructure](https://www.realtld.com/static/consultant/index.html)
+[Engage Apex Defense & Deploy Secure Infrastructure](https://www.gohighlevel.com/ai/june?fp_ref=pkp8t5static/consultant/index.html)
