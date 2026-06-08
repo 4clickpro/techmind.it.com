@@ -27,7 +27,7 @@ The Denver housing market moves fast. Inventory is tight, and clients expect imm
 
 If you want to dominate the Denver market, you need the right tools. 
 
-👉 **[Start your free trial of KVCore here](https://www.gohighlevel.com/ai/june?fp_ref=pkp8t5go/kvcore)** and see why it's the #1 Lead Generation for real estate professionals.
+👉 **[Start your free trial of KVCore here](https://try.magica.com/paul-webb
 
 ***
 *Disclaimer: RealTLD is reader-supported. When you buy through links on our site, we may earn an affiliate commission at no extra cost to you. This helps keep our content free and unbiased.*

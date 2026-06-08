@@ -27,7 +27,7 @@ The Austin housing market moves fast. Inventory is tight, and clients expect imm
 
 If you want to dominate the Austin market, you need the right tools. 
 
-👉 **[Start your free trial of DocuSign here](https://www.gohighlevel.com/ai/june?fp_ref=pkp8t5go/docusign)** and see why it's the #1 Document Signing for real estate professionals.
+👉 **[Start your free trial of DocuSign here](https://try.magica.com/paul-webb
 
 ***
 *Disclaimer: RealTLD is reader-supported. When you buy through links on our site, we may earn an affiliate commission at no extra cost to you. This helps keep our content free and unbiased.*
