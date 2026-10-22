@@ -140,8 +140,44 @@
         <p class="text-xl text-gray-400 max-w-2xl mb-10">Deploy your own AI sales team to capture and qualify leads, organize CRM updates, and prepare timely follow-ups for human approval. Start with one agent and scale to a ten-agent Commander.</p>
         <div class="flex gap-4 mb-12">
             <a href="#salesforce-packages" class="bg-red-600 px-8 py-4 rounded-lg text-lg font-bold hover:bg-red-700 transition shadow-lg shadow-red-600/40">Explore AI Sales Packages</a>
-            <a href="#workflow-demo" class="border border-gray-600 px-8 py-4 rounded-lg text-lg hover:border-blue-400">Try the Workflow Demo</a>
+            <a href="#assistant-preview" class="border border-gray-600 px-8 py-4 rounded-lg text-lg hover:border-blue-400">Try the Sales Assistant Preview</a>
         </div>
+
+        <div id="assistant-preview" class="w-full max-w-4xl mx-auto mb-12 scroll-mt-28 rounded-2xl border border-blue-500/40 bg-gray-950/90 p-6 md:p-8 text-left shadow-xl shadow-blue-950/30">
+          <div class="flex flex-wrap items-center justify-between gap-3 mb-4"><h2 class="hero-font text-2xl md:text-3xl">Meet Your AI Sales Assistant</h2><span class="text-xs rounded-full border border-amber-400/40 text-amber-200 px-3 py-1">Interactive preview · Voice coming soon</span></div>
+          <p class="text-gray-300 mb-5">Explore how a TechMind assistant could qualify a prospect. This is a guided demonstration, not a live AI conversation. No personal information is collected or stored in this preview.</p>
+          <div id="tm-preview-chat" class="rounded-xl border border-gray-700 bg-gray-900/80 p-5 min-h-36" role="status" aria-live="polite"><p class="text-blue-300 font-semibold mb-2">TechMind Sales Assistant · Preview</p><p id="tm-preview-message" class="text-gray-100">Welcome! What would you like an AI sales assistant to help your business accomplish?</p></div>
+          <div id="tm-preview-choices" class="flex flex-wrap gap-3 mt-4"><button type="button" data-choice="leads" class="bg-blue-600 hover:bg-blue-700 px-4 py-3 rounded-lg font-semibold">Capture more leads</button><button type="button" data-choice="calls" class="border border-gray-500 hover:border-blue-400 px-4 py-3 rounded-lg">Answer calls 24/7</button><button type="button" data-choice="followup" class="border border-gray-500 hover:border-blue-400 px-4 py-3 rounded-lg">Automate follow-ups</button></div>
+          <div id="tm-preview-next" class="hidden mt-5"><p class="text-gray-300 mb-4" id="tm-preview-followup"></p><div class="flex flex-wrap gap-3"><a id="tm-preview-email" class="bg-red-600 hover:bg-red-700 px-5 py-3 rounded-lg font-semibold" href="mailto:4clickpro@gmail.com?subject=TechMind%20AI%20Consultation">Request a consultation by email</a><a href="tel:+14086248411" class="border border-gray-500 hover:border-blue-400 px-5 py-3 rounded-lg">Call 408-624-8411</a><button id="tm-preview-reset" type="button" class="text-blue-300 underline px-3">Start over</button></div><p class="text-xs text-gray-400 mt-4">Email opens your email app. This preview does not send or save lead information automatically.</p></div>
+          <p class="text-xs text-gray-500 mt-5">Real-time voice, secure lead storage, and automatic email notifications will be enabled only after a backend provider is configured and approved.</p>
+        </div>
+        <script>
+          (() => {
+            const options = {
+              leads: ['Lead capture', 'We can qualify prospects by business type, service needs, and purchase timeline before passing them to your team.', 'I want help capturing and qualifying leads'],
+              calls: ['24/7 call answering', 'A voice receptionist can answer common questions, collect caller details with consent, and route promising inquiries.', 'I want an AI voice receptionist'],
+              followup: ['Sales follow-up', 'A sales assistant can prepare follow-up messages and CRM updates, with human review before sending.', 'I want AI sales follow-up automation']
+            };
+            const choices = document.getElementById('tm-preview-choices');
+            const next = document.getElementById('tm-preview-next');
+            choices.addEventListener('click', (event) => {
+              const button = event.target.closest('button[data-choice]');
+              if (!button) return;
+              const option = options[button.dataset.choice];
+              if (!option) return;
+              document.getElementById('tm-preview-message').textContent = option[1];
+              document.getElementById('tm-preview-followup').textContent = 'Would you like to discuss a ' + option[0].toLowerCase() + ' solution for your business?';
+              document.getElementById('tm-preview-email').href = 'mailto:4clickpro@gmail.com?subject=' + encodeURIComponent('TechMind consultation: ' + option[0]) + '&body=' + encodeURIComponent('Hello TechMind,\n\n' + option[2] + '.\n\nMy name:\nBusiness:\nBest phone number:\n\nPlease contact me about a consultation.');
+              choices.classList.add('hidden');
+              next.classList.remove('hidden');
+            });
+            document.getElementById('tm-preview-reset').addEventListener('click', () => {
+              document.getElementById('tm-preview-message').textContent = 'Welcome! What would you like an AI sales assistant to help your business accomplish?';
+              next.classList.add('hidden');
+              choices.classList.remove('hidden');
+            });
+          })();
+        </script>
         <div id="workflow-demo" class="w-full max-w-4xl mx-auto mb-12 scroll-mt-28">
             <h2 class="hero-font text-2xl md:text-3xl mb-5">See AI Sales Automation in Action</h2>
             <div class="relative w-full overflow-hidden rounded-xl border border-gray-700 shadow-lg" style="aspect-ratio:16/9">
