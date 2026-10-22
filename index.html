@@ -100,6 +100,22 @@
         .hero-font { font-family: 'Orbitron', sans-serif; }
         .glass { background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1); }
         .gradient-text { background: linear-gradient(90deg, #007bff, #00d4ff); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+
+        /* TechMind cinematic AI command-network visual identity */
+        body { background: #050912; }
+        .tm-hero { position: relative; isolation: isolate; overflow: hidden; min-height: 700px; }
+        .tm-hero::before { content: ""; position: absolute; z-index: -2; inset: 0; background:
+            radial-gradient(ellipse at 75% 30%, rgba(0,148,255,.26), transparent 46%),
+            radial-gradient(ellipse at 15% 80%, rgba(220,38,38,.16), transparent 48%),
+            linear-gradient(135deg,#040814 0%,#0b1930 50%,#06070e 100%); }
+        .tm-hero::after { content: ""; position: absolute; z-index: -1; inset: 0; opacity: .65;
+            background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700"%3E%3Cg stroke="%2300bfff" stroke-opacity=".27" fill="none" stroke-width="1.5"%3E%3Cpath d="M50 410L220 250 370 340 510 145 670 260 850 100 1060 210 1170 80M220 250L180 530 370 340 540 540 670 260 860 480 1060 210 1150 580M510 145L850 100M370 340L670 260M540 540L860 480"/%3E%3C/g%3E%3Cg fill="%2300caff"%3E%3Ccircle cx="50" cy="410" r="4"/%3E%3Ccircle cx="220" cy="250" r="7"/%3E%3Ccircle cx="370" cy="340" r="5"/%3E%3Ccircle cx="510" cy="145" r="7"/%3E%3Ccircle cx="670" cy="260" r="9"/%3E%3Ccircle cx="850" cy="100" r="5"/%3E%3Ccircle cx="1060" cy="210" r="8"/%3E%3Ccircle cx="860" cy="480" r="6"/%3E%3Ccircle cx="540" cy="540" r="5"/%3E%3Ccircle cx="180" cy="530" r="5"/%3E%3Ccircle cx="1150" cy="580" r="5"/%3E%3C/g%3E%3C/svg%3E');
+            background-position: center; background-repeat: no-repeat; background-size: cover; pointer-events: none; }
+        .tm-hero h1 { text-shadow: 0 8px 40px rgba(0,0,0,.8); }
+        .tm-hero p { text-shadow: 0 2px 16px rgba(0,0,0,.9); }
+        .tm-hero #workflow-demo { background: rgba(5,12,25,.85); padding: 22px; border: 1px solid rgba(0,191,255,.22); border-radius: 18px; box-shadow: 0 20px 80px rgba(0,0,0,.45); }
+        @media (prefers-reduced-motion: no-preference) { .tm-hero::after { animation: tm-network-glow 9s ease-in-out infinite alternate; } @keyframes tm-network-glow { from { opacity: .35; } to { opacity: .75; } } }
+        @media (max-width: 640px) { .tm-hero { min-height: auto; } .tm-hero::after { opacity: .3; } }
     </style>
 </head>
 <body class="overflow-x-hidden">
@@ -116,7 +132,7 @@
     </nav>
 
     <!-- Hero -->
-    <section class="flex flex-col items-center justify-center text-center p-6 pt-24 pb-12">
+    <section class="tm-hero flex flex-col items-center justify-center text-center p-6 pt-24 pb-12">
         <!-- Red CTA Buttons -->
         <div class="flex items-center justify-center gap-4 mb-8 flex-wrap"><a href="packages.html#inquiry" class="bg-red-600 hover:bg-red-700 text-white font-bold px-6 py-3 rounded-lg">Book a Free AI Strategy Call</a><a href="mailto:4clickpro@gmail.com?subject=TechMind%20AI%20Callback%20Request" class="border border-gray-500 text-white font-bold px-6 py-3 rounded-lg">Request a Phone Call</a></div>
         <h1 class="hero-font text-6xl md:text-8xl mb-6">AI Sales <br><span class="gradient-text">Assistants</span></h1>
