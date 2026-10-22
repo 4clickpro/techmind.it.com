@@ -3,6 +3,9 @@ on:
   push:
     branches: [master]
   workflow_dispatch:
+  schedule:
+    # GitHub App commits may not fire push workflows. Periodically publish master.
+    - cron: '*/15 * * * *'
 permissions:
   contents: read
   pages: write
