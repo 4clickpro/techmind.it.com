@@ -140,7 +140,7 @@
     <!-- Hero -->
     <section class="tm-hero flex flex-col items-center justify-center text-center p-6 pt-24 pb-12">
         <img class="tm-salesforce-robot" src="/salesforce-robot.svg" width="500" height="650" alt="Futuristic TechMind AI SalesForce robot with glowing blue eyes" loading="eager" fetchpriority="high">\n        <!-- Red CTA Buttons -->
-        <div class="flex items-center justify-center gap-4 mb-8 flex-wrap"><a href="packages.html#inquiry" class="bg-red-600 hover:bg-red-700 text-white font-bold px-6 py-3 rounded-lg">Book a Free AI Strategy Call</a><a href="mailto:4clickpro@gmail.com?subject=TechMind%20AI%20Callback%20Request" class="border border-gray-500 text-white font-bold px-6 py-3 rounded-lg">Request a Phone Call</a></div>
+        <div class="flex items-center justify-center gap-4 mb-8 flex-wrap"><a href="packages.html#inquiry" class="bg-red-600 hover:bg-red-700 text-white font-bold px-6 py-3 rounded-lg">Book a Free AI Strategy Call</a><a href="packages.html#inquiry" class="border border-gray-500 text-white font-bold px-6 py-3 rounded-lg">Request a Phone Call</a></div>
         <h1 class="hero-font text-6xl md:text-8xl mb-6">AI Sales <br><span class="gradient-text">Assistants</span></h1>
         <p class="text-xl text-gray-400 max-w-2xl mb-10">Deploy your own AI sales team to capture and qualify leads, organize CRM updates, and prepare timely follow-ups for human approval. Start with one agent and scale to a ten-agent Commander.</p>
         <div class="flex gap-4 mb-12">
@@ -153,7 +153,7 @@
           <p class="text-gray-300 mb-5">Explore how a TechMind assistant could qualify a prospect. This is a guided demonstration, not a live AI conversation. No personal information is collected or stored in this preview.</p>
           <div id="tm-preview-chat" class="rounded-xl border border-gray-700 bg-gray-900/80 p-5 min-h-36" role="status" aria-live="polite"><p class="text-blue-300 font-semibold mb-2">TechMind Sales Assistant · Preview</p><p id="tm-preview-message" class="text-gray-100">Welcome! What would you like an AI sales assistant to help your business accomplish?</p></div>
           <div id="tm-preview-choices" class="flex flex-wrap gap-3 mt-4"><button type="button" data-choice="leads" class="bg-blue-600 hover:bg-blue-700 px-4 py-3 rounded-lg font-semibold">Capture more leads</button><button type="button" data-choice="calls" class="border border-gray-500 hover:border-blue-400 px-4 py-3 rounded-lg">Answer calls 24/7</button><button type="button" data-choice="followup" class="border border-gray-500 hover:border-blue-400 px-4 py-3 rounded-lg">Automate follow-ups</button></div>
-          <div id="tm-preview-next" class="hidden mt-5"><p class="text-gray-300 mb-4" id="tm-preview-followup"></p><div class="flex flex-wrap gap-3"><a id="tm-preview-email" class="bg-red-600 hover:bg-red-700 px-5 py-3 rounded-lg font-semibold" href="mailto:4clickpro@gmail.com?subject=TechMind%20AI%20Consultation">Request a consultation by email</a><a href="tel:+14086248411" class="border border-gray-500 hover:border-blue-400 px-5 py-3 rounded-lg">Call 408-624-8411</a><button id="tm-preview-reset" type="button" class="text-blue-300 underline px-3">Start over</button></div><p class="text-xs text-gray-400 mt-4">Email opens your email app. This preview does not send or save lead information automatically.</p></div>
+          <div id="tm-preview-next" class="hidden mt-5"><p class="text-gray-300 mb-4" id="tm-preview-followup"></p><div class="flex flex-wrap gap-3"><a id="tm-preview-email" class="bg-red-600 hover:bg-red-700 px-5 py-3 rounded-lg font-semibold" href="packages.html#inquiry">Request a consultation by email</a><a href="tel:+14086248411" class="border border-gray-500 hover:border-blue-400 px-5 py-3 rounded-lg">Call 408-624-8411</a><button id="tm-preview-reset" type="button" class="text-blue-300 underline px-3">Start over</button></div><p class="text-xs text-gray-400 mt-4">Email opens your email app. This preview does not send or save lead information automatically.</p></div>
           <p class="text-xs text-gray-500 mt-5">Real-time voice, secure lead storage, and automatic email notifications will be enabled only after a backend provider is configured and approved.</p>
         </div>
         <script>
@@ -172,7 +172,7 @@
               if (!option) return;
               document.getElementById('tm-preview-message').textContent = option[1];
               document.getElementById('tm-preview-followup').textContent = 'Would you like to discuss a ' + option[0].toLowerCase() + ' solution for your business?';
-              document.getElementById('tm-preview-email').href = 'mailto:4clickpro@gmail.com?subject=' + encodeURIComponent('TechMind consultation: ' + option[0]) + '&body=' + encodeURIComponent('Hello TechMind,\n\n' + option[2] + '.\n\nMy name:\nBusiness:\nBest phone number:\n\nPlease contact me about a consultation.');
+              document.getElementById('tm-preview-email').href = 'packages.html#inquiry';
               choices.classList.add('hidden');
               next.classList.remove('hidden');
             });
