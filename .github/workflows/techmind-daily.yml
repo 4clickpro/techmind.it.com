@@ -1,0 +1,25 @@
+name: TechMind daily website check
+on:
+  schedule:
+    - cron: '17 13 * * *'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  health:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Check public site, directory, sitemap and sponsor links
+        run: python scripts/techmind_daily.py
+      - name: Save diagnostic report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: techmind-health-report
+          path: techmind-health-report.json
+          if-no-files-found: ignore
