@@ -1,0 +1,14 @@
+# TechMind
+
+Website: https://techmind.it.com/
+
+TechMind provides business-focused AI sales assistants and automation services, including lead qualification, appointment booking, CRM workflows, and human-reviewed follow-up.
+
+## Key pages
+- [Home](https://techmind.it.com/)
+- [AI tools directory](https://techmind.it.com/directory.html)
+- [AI sales and lead capture](https://techmind.it.com/ai-sales-receptionist-lead-capture.html)
+- [AI lead qualification](https://techmind.it.com/ai-lead-qualification-service.html)
+- [AI appointment booking for HVAC](https://techmind.it.com/ai-appointment-booking-hvac.html)
+
+For additional public pages, consult https://techmind.it.com/sitemap.xml . Information on this site is subject to change; verify current offerings on the linked pages.
