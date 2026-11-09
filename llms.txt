@@ -2,13 +2,40 @@
 
 Website: https://techmind.it.com/
 
-TechMind provides business-focused AI sales assistants and automation services, including lead qualification, appointment booking, CRM workflows, and human-reviewed follow-up.
+TechMind builds AI sales assistants that answer fast, qualify leads, book appointments, and follow up — with your team in control. TechMind provides business-focused AI sales assistants and automation services, including lead qualification, appointment booking, CRM workflows, and human-reviewed follow-up.
+
+Contact: call TechMind Solutions at 408-624-8411, or book a free AI strategy call at https://techmind.it.com/packages.html#inquiry
+
+## Packages (all Custom quote)
+
+- Focus — 1 AI sales agent
+- Team — 2 AI sales agents
+- Department — 3 AI sales agents
+- Operations — 4–6 AI sales agents
+- Enterprise AI Team — 7–10 AI sales agents
+
+Add-ons: voice reception, cybersecurity, custom automation. Pricing is customized after a consultation and written scope. Hosting, model usage and third-party services are scoped separately.
+
+## Answer Engine Optimization (AEO)
+
+AEO gets a business quoted and cited by AI answers — ChatGPT, Perplexity, Google AI Overviews, Copilot and Gemini. TechMind's AEO package includes AI crawler access, sitemap, llms.txt, structured data/schema, answer-first pages, and citation tracking and reporting. No citation, ranking or placement is guaranteed — the engines decide.
+
+## Questions owners ask
+
+- What does TechMind do? TechMind builds AI sales assistants that answer fast, qualify leads, book appointments, and follow up — with your team in control. Start with one agent and scale to a ten-agent Enterprise AI Team.
+- How many AI agents should I start with? Start with one agent (Focus), then expand to Team (2), Department (3), Operations (4–6), or Enterprise AI Team (7–10).
+- What is AEO and how is it different from SEO? SEO helps you rank in search results. AEO helps AI engines quote and cite your business in their answers.
+- How much does TechMind cost? Every package is a custom quote, priced after a consultation and written scope.
+- How do I get started? Book a free AI strategy call, or call 408-624-8411.
 
 ## Key pages
+
 - [Home](https://techmind.it.com/)
 - [AI tools directory](https://techmind.it.com/directory.html)
+- [Packages — book a free AI strategy call](https://techmind.it.com/packages.html#inquiry)
 - [AI sales and lead capture](https://techmind.it.com/ai-sales-receptionist-lead-capture.html)
 - [AI lead qualification](https://techmind.it.com/ai-lead-qualification-service.html)
 - [AI appointment booking for HVAC](https://techmind.it.com/ai-appointment-booking-hvac.html)
+- [AI agent directory (partner)](https://www.aiagent.com.mx/)
 
 For additional public pages, consult https://techmind.it.com/sitemap.xml . Information on this site is subject to change; verify current offerings on the linked pages.
