@@ -399,6 +399,11 @@
     .ast-opt small{color:var(--muted);font-weight:400}
     .ast-opt::after{content:"›";font-size:22px;color:var(--green);font-weight:700}
     .ast-note{background:var(--green-soft);border:1px solid var(--line);border-radius:12px;padding:14px 16px;font-size:15px;color:var(--muted);margin-top:14px}
+    .cb-form{display:grid;gap:14px}
+    .cb-field label{display:block;font-weight:700;margin-bottom:6px}
+    .cb-field input{width:100%;font:inherit;padding:12px 14px;border:1.5px solid var(--line);border-radius:12px;background:var(--bg);color:var(--ink)}
+    .cb-field input:focus{border-color:var(--green);outline:none}
+    .cb-consent{font-size:15px;color:var(--muted);margin:0}
   </style>
   <section id="assistant">
     <div class="wrap">
@@ -474,6 +479,42 @@
         </div>
       </div>
       <p class="micro" style="margin-top:14px">Funding is subject to review and never guaranteed. No approval, rate, or amount is promised here. Credit can affect the amount and terms offered. Paul Webb and businessloan.space are not a lender or bank and do not make credit decisions.</p>
+    </div>
+  </section>
+
+  <!-- REQUEST A CALLBACK -->
+  <section id="callback">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Request a callback</h2>
+        <p>Want a quick call back about your funding check? Leave your number and Paul Webb&rsquo;s assistant from TechMind will call you back.</p>
+      </div>
+      <div class="funnel">
+        <form class="cb-form" action="https://formsubmit.co/4clickpro@gmail.com" method="POST">
+          <input type="hidden" name="_subject" value="TechMind callback request &mdash; business funding">
+          <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="_captcha" value="false">
+          <div class="cb-field">
+            <label for="cb-name">Your name</label>
+            <input id="cb-name" name="name" type="text" autocomplete="name" required>
+          </div>
+          <div class="cb-field">
+            <label for="cb-business">Business name (optional)</label>
+            <input id="cb-business" name="business" type="text" autocomplete="organization">
+          </div>
+          <div class="cb-field">
+            <label for="cb-phone">Phone number</label>
+            <input id="cb-phone" name="phone" type="tel" autocomplete="tel" required>
+          </div>
+          <div class="cb-field">
+            <label for="cb-time">Best time to call (optional)</label>
+            <input id="cb-time" name="best_time" type="text" placeholder="e.g. weekday mornings">
+          </div>
+          <p class="cb-consent">By leaving your number you agree Paul Webb&rsquo;s assistant from TechMind may call you back about the business funding check you asked about.</p>
+          <button class="btn btn-primary btn-lg" type="submit">Call me back</button>
+          <p class="micro">Your number is only used for this callback. Funding is subject to review and never guaranteed.</p>
+        </form>
+      </div>
     </div>
   </section>
 
@@ -599,7 +640,7 @@
     </div>
     <div class="disclaimer">
       <p>* Same-day funding is possible for qualified businesses and is not guaranteed. All financing is subject to application, review, and approval. Amounts, rates, and terms vary by business profile and product, and are disclosed in your offer — review them in full before accepting.</p>
-      <p>Paul Webb and businessloan.space are not a lender or bank and do not make credit decisions. This page collects no personal information; the 4-question checker runs only in your browser to help you self-screen. When you continue, you go straight to my application to complete it under that site’s privacy policy and terms.</p>
+      <p>Paul Webb and businessloan.space are not a lender or bank and do not make credit decisions. The 4-question checker runs only in your browser to help you self-screen and collects no personal information. Only the callback form above collects anything &mdash; the name and phone number you choose to leave &mdash; and only so Paul Webb&rsquo;s assistant can call you back. When you continue, you go straight to my application to complete it under that site’s privacy policy and terms.</p>
       <p>© 2026 Paul Webb — businessloan.space — Business financing for U.S. small business owners.</p>
     </div>
   </div>
