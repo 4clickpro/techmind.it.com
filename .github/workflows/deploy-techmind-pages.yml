@@ -1,7 +1,8 @@
 name: Deploy TechMind to GitHub Pages
 on:
-  push:
-    branches: [master]
+  # Push trigger removed 2026-11-24: this workflow publishes only top-level files (+growth, aeo-agency),
+  # and when it finished after deploy-pages.yml it took /businessloan.space/, /blog/, /news/ and llms.txt offline.
+  # deploy-pages.yml (full site) handles push deploys. Run this one manually only if needed.
   workflow_dispatch:
 permissions:
   contents: read
