@@ -10,9 +10,9 @@ document.querySelector('#inquiry-form').addEventListener('submit',async e=>{
     // Apps Script does not expose a browser-readable cross-origin response.
     // An opaque response means the browser sent the request, not that Sheets saved it.
     await fetch(TECHMIND_LEADS_ENDPOINT,{method:'POST',mode:'no-cors',body:new URLSearchParams(fields)});
-    status.textContent='Your inquiry was sent for processing. If you do not hear back, email 4clickpro@gmail.com directly. Thank you!';
+    status.textContent='Your inquiry was sent for processing. If you do not hear back, email techmind@muse.ai directly. Thank you!';
     form.reset();
   }catch(err){
-    status.textContent='We could not send your inquiry. Please email 4clickpro@gmail.com directly.';
+    status.textContent='We could not send your inquiry. Please email techmind@muse.ai directly.';
   }finally{button.disabled=false;}
 });

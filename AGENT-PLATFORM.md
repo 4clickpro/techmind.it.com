@@ -20,7 +20,7 @@ An optional OpenAI Responses API backend is supplied in backend/demo-server.mjs.
 Existing AIagent PayPal SDK and hosted button code is preserved. No payment was initiated, amounts changed, or paid-service entitlement implemented. Verify each button's product, amount and merchant before connecting it to a custom package. Use server-verified payment events if automated fulfillment is added; never fulfill solely on a browser success callback.
 
 ## Inquiry
-The proposed sales inquiry uses 4clickpro@gmail.com, already present in the other TechMind repository. Confirm this is the intended business inbox before launch.
+The proposed sales inquiry uses techmind@muse.ai, already present in the other TechMind repository. Confirm this is the intended business inbox before launch.
 
 ## Verification
 JavaScript syntax, local internal-link/file consistency, sample demo and validation paths are checked. Browser visual QA and live hosting behavior require the actual deployment environment. No live API key, payment or deployment was exercised.
