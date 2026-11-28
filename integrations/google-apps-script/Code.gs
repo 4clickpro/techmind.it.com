@@ -1,6 +1,6 @@
 /** TechMind inquiry receiver. Deploy as Google Apps Script Web App (execute as me). */
 const SHEET_ID = '12cdkHO66sCbTskFFaxWSBK9Qt25aLQXN-p6erTUMW9U';
-const NOTIFY_EMAIL = '4clickpro@gmail.com';
+const NOTIFY_EMAIL = 'techmind@muse.ai';
 function doPost(e) {
   const p = (e && e.parameter) || {};
   // Honeypot field: normal visitors leave it empty.
