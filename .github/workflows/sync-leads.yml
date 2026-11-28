@@ -1,0 +1,51 @@
+name: Sync website leads to Notion
+
+# Copies new free-audit form submissions into Notion (Leads & Clients, stage New).
+# Scheduled runs only execute from the default branch (master), so this does nothing
+# until it is merged. No lead data or secrets are ever written to the repo.
+# Repo is public: the script logs counts and submission ids only, never emails.
+
+on:
+  schedule:
+    - cron: '*/15 * * * *'
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: 'Dry run: fetch and dedupe but do not create Notion pages'
+        type: boolean
+        default: false
+
+permissions:
+  contents: read
+
+concurrency:
+  group: sync-leads
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Sync new submissions to Notion
+        run: node scripts/sync-leads.mjs
+        env:
+          # Source adapter: formbold (free plan has a submissions API), formspree (needs Professional+), file.
+          LEAD_SOURCE: ${{ vars.LEAD_SOURCE || 'formbold' }}
+          FORMBOLD_API_TOKEN: ${{ secrets.FORMBOLD_API_TOKEN }}
+          FORMBOLD_FORM_ID: ${{ secrets.FORMBOLD_FORM_ID || vars.FORMBOLD_FORM_ID }}
+          FORMSPREE_API_KEY: ${{ secrets.FORMSPREE_API_KEY }}
+          FORMSPREE_FORM_ID: ${{ secrets.FORMSPREE_FORM_ID || vars.FORMSPREE_FORM_ID }}
+          NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
+          # Leads & Clients data source (see NOTION.md). Override with a repo variable if it ever changes.
+          NOTION_DATA_SOURCE_ID: ${{ vars.NOTION_DATA_SOURCE_ID || '42211104-b1c8-815e-a040-000b6eb69152' }}
+          LOOKBACK_DAYS: ${{ vars.LOOKBACK_DAYS || '7' }}
+          # Set repo variable DEBUG_SHAPE=1 for one run to log the response shape (keys/types only, no values).
+          DEBUG_SHAPE: ${{ vars.DEBUG_SHAPE || '0' }}
+          # Manual runs fail loudly on missing config; scheduled runs just print a notice.
+          STRICT: ${{ github.event_name == 'workflow_dispatch' && '1' || '0' }}
+          DRY_RUN: ${{ inputs.dry_run && '1' || '0' }}
