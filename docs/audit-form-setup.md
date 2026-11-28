@@ -23,7 +23,7 @@ Formspree's **Free plan has no API access** (Professional, about $20/month bille
 
 ### 2. Point the page at your form
 
-In `aeo-agency/index.html`, replace the single `FORM_ID` in the form's `action` (`https://formbold.com/s/FORM_ID`) with your form ID. Search the file for `FORM_ID`; nothing else needs editing. While the placeholder is still there, the page shows "not connected yet" instead of sending, so no lead can be lost.
+In `aeo-agency/index.html`, replace `FORM_ID` in the form's `action` (`https://formbold.com/s/FORM_ID`) with your form ID. Searching the file for `FORM_ID` finds two places: the `action` (replace it) and an HTML comment above the form (harmless). Nothing else needs editing. While the placeholder is still there, the page shows "not connected yet" instead of sending, so no lead can be lost.
 
 ### 3. Create the Notion connection
 
